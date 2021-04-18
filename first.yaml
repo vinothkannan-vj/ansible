@@ -1,0 +1,22 @@
+-host: all
+-remote_user: ec3-user
+become: yes
+task:
+  -name: im gong to install apache
+   yum:
+      name: httpd
+      state: prsent
+  -name: im going to start the apache
+   service: 
+      name: httpd
+      state: started
+  -name:
+   copy:
+      src: ./index.html
+      dest: /var/www/html/index.html
+      mode: '0777'
+  
+
+
+
+
