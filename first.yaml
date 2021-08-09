@@ -5,7 +5,7 @@ task:
   -name: im gong to install apache
    yum:
       name: httpd
-      state: prsent
+      state: present
   -name: im going to start the apache
    service: 
       name: httpd
